@@ -20,7 +20,7 @@ export const putDb = async (content) => {
   const request = store.put({ jate: content });
   const result = await request;
   console.log('result.value', result);
-  return result;
+  //return result;
 };
 
 // TODO: Add logic for a method that gets all the content from the database
@@ -32,7 +32,7 @@ export const getDb = async () => {
   const request = store.getAll();
   const result = await request;
   console.log('result.value', result);
-  return result;
+  return result.jate;
 };
 
 initdb();
